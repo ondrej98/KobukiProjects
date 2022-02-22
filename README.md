@@ -1,6 +1,6 @@
 # KobukiProjects
  
-Demo implementácia projektu Kobuki na predmetoch RMR a HMi v Robotike vyučovaných na ÚRK FEI STUBA.
+Demo implementácia projektu Kobuki na predmetoch RMR a HMI v Robotike vyučovaných na ÚRK FEI STUBA.
 
 # Delenie projektu
 - KobukiCore je projekt, ktorý obsahuje len základnú (Core) funkcionalita pre ovládanie a vyčítavanie dát z robota Kobuki + načítavanie dát z Lidara a Skeletonu.
