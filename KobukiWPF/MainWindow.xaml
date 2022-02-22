@@ -1,0 +1,82 @@
+﻿<Window x:Class="KobukiWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KobukiWPF"
+        xmlns:uc="clr-namespace:KobukiWPF.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" MinHeight="450" MinWidth="650"
+        SizeChanged="Window_SizeChanged" KeyDown="Window_KeyDown">
+    <Grid Background="Silver">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Column="1" Grid.Row="1" Margin="10">
+            <Button Name="BtnTotalStop" Background="Red" Foreground="White" FontSize="20" FontWeight="Bold" 
+                    Click="BtnTotalStop_Click" KeyDown="BtnTotalStop_KeyDown">
+                <TextBlock Text="Total Stop"/>
+            </Button>
+        </DockPanel>
+        <TabControl x:Name="RightTabControl" Grid.Column="1" Grid.Row="0" Margin="10" TabStripPlacement="Top">
+            <TabItem x:Name="TabItemDataOverview" Header="Data">
+                <uc:UserControlKobukiSimpleData x:Name="ucKobukiSimpleData" Focusable="False" />
+            </TabItem>
+            <TabItem x:Name="TabItemDisplayOptions" Header="Display">
+                <StackPanel>
+                    <CheckBox Name="checkBoxShowCamera" Content="Show camera" Margin="10" IsChecked="False"
+                      Checked="CheckBox_Checked"
+                      Unchecked="CheckBox_Unchecked"/>
+                    <CheckBox Name="checkBoxShowLidar" Content="Show lidar" Margin="10"
+                      Checked="CheckBox_Checked"
+                      Unchecked="CheckBox_Unchecked"/>
+                    <CheckBox Name="checkBoxShowSkeleton" Content="Show skeleton" Margin="10"
+                      Checked="CheckBox_Checked"
+                      Unchecked="CheckBox_Unchecked"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+        <Grid Grid.Column="0" Grid.Row="0" Background="White">
+            <uc:UserControlPaintData x:Name="ucPaintData">
+
+            </uc:UserControlPaintData>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Button Name="BtnForward" Grid.Column="2" Grid.Row="1" Margin="2" Focusable="False"
+                    Click="BtnRobotControl_Clicked" KeyDown="BtnRobotControl_KeyDown">
+                <TextBlock Text="Forward"/>
+            </Button>
+            <Button Name="BtnLeft" Grid.Column="1" Grid.Row="2" Margin="2" Focusable="False"
+                    Click="BtnRobotControl_Clicked" KeyDown="BtnRobotControl_KeyDown">
+                <TextBlock Text="Turn Left"/>
+            </Button>
+            <Button Name="BtnRight" Grid.Column="3" Grid.Row="2" Margin="2" Focusable="False"
+                    Click="BtnRobotControl_Clicked" KeyDown="BtnRobotControl_KeyDown">
+                <TextBlock Text="Turn right"/>
+            </Button>
+            <Button Name="BtnBackWard" Grid.Column="2" Grid.Row="3" Margin="2" Focusable="False"
+                    Click="BtnRobotControl_Clicked">
+                <TextBlock Text="Backward"/>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
