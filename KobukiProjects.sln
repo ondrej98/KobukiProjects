@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KobukiCore", "KobukiCore\KobukiCore.csproj", "{D7055D27-BBDA-4E46-B4C9-FF86C52516DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7055D27-BBDA-4E46-B4C9-FF86C52516DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7055D27-BBDA-4E46-B4C9-FF86C52516DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7055D27-BBDA-4E46-B4C9-FF86C52516DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7055D27-BBDA-4E46-B4C9-FF86C52516DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D61F84E2-9DE9-4215-AB94-E8A369F50AAB}
+	EndGlobalSection
+EndGlobal
